@@ -5,6 +5,7 @@ module "jbeard_dev_aws" {
   domain      = "jbeard.dev"
   bucket_name = "s3-website-jbeard-dev"
   iam_name    = "s3-deployer-jbeard-dev"
+  tags        = { "git_repo" : "https://github.com/jbeard-dev/tf-jbeard.dev-aws" }
 }
 
 module "jbeard_dev_migadu" {

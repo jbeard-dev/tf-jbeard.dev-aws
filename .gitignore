@@ -1,2 +1,2 @@
-aws.env
+backend.tfvars
 .terraform*
