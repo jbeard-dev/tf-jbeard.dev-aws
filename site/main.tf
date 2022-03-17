@@ -15,3 +15,11 @@ module "jbeard_dev_migadu" {
   zone_id       = module.jbeard_dev_aws.route53_zone_id
   migadu_verify = "3zbtwhss"
 }
+
+resource "aws_route53_record" "github-verify-jbeard-dev" {
+  zone_id = module.jbeard_dev_aws.route53_zone_id
+  name    = "_github-challenge-jbeard-dev"
+  type    = "TXT"
+  ttl     = 300
+  records = ["90d2e733cd"]
+}
