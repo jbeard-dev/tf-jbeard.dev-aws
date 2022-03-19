@@ -14,6 +14,9 @@ module "jbeard_dev_migadu" {
   domain        = "jbeard.dev"
   zone_id       = module.jbeard_dev_aws.route53_zone_id
   migadu_verify = "3zbtwhss"
+  txt_records = [
+    "keybase-site-verification=29CVZ34QlA3qhtb7Dick5xxm8FB5iaG-AJZWQwdETes"
+  ]
 }
 
 resource "aws_route53_record" "github-verify-jbeard-dev" {
